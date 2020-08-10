@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JSON</h1>
+    <h2>JavaScript Object Notation</h2>
+    <script>
+        const user = {
+            id: 18701035, 
+            name: 'Roky Das',
+            friends: ['Saruj', 'Tonmoy', 'Bonda'],
+            friendsAge: [23, 22, 21],
+            brother: {
+                name: "Showrav Das",
+                age: 16
+            }
+        };
+        const userJSON = JSON.stringify(user); // object ke JSON ba string e convert kora. 
+        console.log(user);
+        console.log(userJSON);
+        // {"id":18701035,"name":"Roky Das"}
+        // JSON e convert korle property gulo te o "" cole asbe. 
+        const userFromJSON = JSON.parse(userJSON);
+        console.log(userFromJSON); // JSON ba string theke object e convert korar jonno. 
+        // kono server theke data ashar somoy asbe json format e. tokhon kono property niye kaj kora jabe na, 
+        // tai json ke object e convert korte hoi. 
+    </script>
+</body>
+</html>
